@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
--
+- Use the adapter pattern
 
 ## Instructions
 
