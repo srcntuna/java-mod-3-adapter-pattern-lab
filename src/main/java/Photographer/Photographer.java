@@ -2,16 +2,23 @@ package Photographer;
 
 import Camera.Camera;
 import Camera.CameraFactory;
+import Camera.DigitalCamera;
 
 public class Photographer implements  PhotoOperation{
-    private Camera camera;
+    private Camera traditionalCamera;
+
+    private DigitalCamera digitalCamera;
 
     public Photographer(CameraFactory.CameraManufacturer cameraManufacturer) {
-     this.camera = CameraFactory.makeCamera(cameraManufacturer);
+     this.traditionalCamera = CameraFactory.makeCamera(cameraManufacturer);
+     this.digitalCamera = new DigitalCamera(this.traditionalCamera);
     }
 
     @Override
     public void takePhotograph(double shutterSpeed) {
-        camera.takePhotograph(shutterSpeed);
+
+        traditionalCamera.takePhotograph(shutterSpeed);
+        digitalCamera.takePhotograph(shutterSpeed);
+
     }
 }

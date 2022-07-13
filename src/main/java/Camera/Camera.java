@@ -38,4 +38,18 @@ public abstract class Camera {
 
 
 
+    public FilmOperations getFilmOps() {
+        return filmOps;
+    }
+
+    public ShutterOperations getShutterOps() {
+        return shutterOps;
+    }
+
+    public MirrorOperations getMirrorOps() {
+        return mirrorOps;
+    }
+
+
+
 }

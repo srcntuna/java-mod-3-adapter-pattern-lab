@@ -4,7 +4,10 @@ import Camera.CameraFactory;
 public class PhotoStudio {
     public static void main(String[] args) {
         // your code here
-        Photographer sercan = new Photographer(CameraFactory.CameraManufacturer.CANON_FILM);
+
+        CameraFactory.CameraManufacturer canon = CameraFactory.CameraManufacturer.CANON_FILM;
+
+        Photographer sercan = new Photographer(canon);
         sercan.takePhotograph(100.0);
 
     }
